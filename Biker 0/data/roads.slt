@@ -1,0 +1,52 @@
+using Biker_0.Road;
+using Biker_0.Road.RoadQuality as Quality;
+
+Roads = [
+    new Road(0, 1, Quality.Asphalt),
+    new Road(0, 2),
+    new Road(0, 3),
+    new Road(0, 8, Quality.Asphalt),
+    new Road(1, 2, Quality.Asphalt),
+    new Road(1, 4),
+    new Road(2, 3, Quality.Asphalt),
+    new Road(2, 4, Quality.Asphalt),
+    new Road(3, 5),
+    new Road(3, 6, Quality.Asphalt),
+    new Road(3, 8),
+    new Road(3, 9, Quality.Asphalt),
+    new Road(3, 10),
+    new Road(4, 5),
+    new Road(5, 6, Quality.Asphalt),
+    new Road(5, 7),
+    new Road(6, 7, Quality.Asphalt),
+    new Road(6, 9),
+    new Road(6, 10),
+    new Road(7, 10),
+    new Road(8, 9, Quality.Asphalt),
+    new Road(8, 12),
+    new Road(8, 13, Quality.Asphalt),
+    new Road(9, 10, Quality.Asphalt),
+    new Road(9, 11),
+    new Road(9, 12, Quality.Asphalt),
+    new Road(10, 11, Quality.Asphalt),
+    new Road(10, 12),
+    new Road(11, 12),
+    new Road(12, 16, Quality.Asphalt),
+    new Road(13, 14, Quality.Asphalt),
+    new Road(14, 15, Quality.Railroad),
+    new Road(15, 16, Quality.Asphalt),
+    new Road(15, 17, Quality.Railroad),
+    new Road(16, 17),
+    new Road(17, 18, Quality.Railroad),
+    new Road(17, 19),
+    new Road(17, 20, Quality.Asphalt),
+    new Road(18, 19, Quality.Asphalt),
+    new Road(19, 20)
+];
+
+using linq;
+foreach (road in linq.to_array(Roads)) {
+    Roads.Add(road.Reverse());
+}
+
+return Roads;
