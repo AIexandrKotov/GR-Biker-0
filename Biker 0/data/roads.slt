@@ -41,12 +41,11 @@ Roads = [
     new Road(17, 19),
     new Road(17, 20, Quality.Asphalt),
     new Road(18, 19, Quality.Asphalt),
-    new Road(19, 20)
+    new Road(19, 20),
 ];
 
 using linq;
-foreach (road in linq.to_array(Roads)) {
+foreach (road in linq.to_array(Roads))
     Roads.Add(road.Reverse());
-}
 
 return Roads;

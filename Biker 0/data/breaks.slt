@@ -1,319 +1,402 @@
-context bb0: Biker_0.BikeBreak {
+using Biker_0.BikeBreak as bb;
+using Biker_0.BreakEffect as effect;
+
+context: bb {
     Name = "Повреждение камеры переднего колеса";
     Description = "Мда... Опять колесо проколол... Ну сколько можно, а? Надеюсь доеду на остатках воздуха...";
     Prices = 500;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb1: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение шины переднего колеса";
     Description = "Мда... Опять колесо проколол... Ну сколько можно, а? Надеюсь доеду на остатках воздуха...";
     Prices = 2500;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb2: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение обода переднего колеса";
     Description = "Мне кажется, или колесо едет не ровно?";
     Prices = 1500;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb3: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение спиц переднего колеса";
     Description = "По дороге ветка в колесо попала...";
     Prices = 1000;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb4: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение камеры заднего колеса";
     Description = "Мда... Опять колесо проколол... Ну сколько можно, а? Надеюсь доеду на остатках воздуха...";
     Prices = 500;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb5: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение шины заднего колеса";
     Description = "Мда... Опять колесо проколол... Ну сколько можно, а? Надеюсь доеду на остатках воздуха...";
     Prices = 2500;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb6: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение обода заднего колеса";
     Description = "Мне кажется, или колесо едет не ровно?";
     Prices = 1500;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb7: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение спиц заднего колеса";
     Description = "По дороге ветка в колесо попала...";
     Prices = 1000;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb8: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение манетки заднего переключателя";
     Description = "Как-то хреново скорости переключаются... Надо будет проверить...";
     Prices = 1000;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb9: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение манетки переднего переключателя";
     Description = "Как-то хреново скорости переключаются... Надо будет проверить...";
     Prices = 2000;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb10: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение рычага переднего тормоза";
     Description = "Как-то слабо велосипед тормозит... Надо будет проверить...";
     Prices = 1000;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb11: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение рычага заднего тормоза";
     Description = "Как-то слабо велосипед тормозит... Надо будет проверить...";
     Prices = 1000;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb12: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение велокомпьютера";
     Description = "Спидометр перестал скорость показывать... Придётся менять.";
     Prices = 1500;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb13: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение руля";
     Description = "Сейчас бы руль на велике повредить...";
     Prices = 1500;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb14: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение передней вилки";
     Description = "Ай-й, вилка сломалась. Ладно, думаю, на изоленте до конца дороги продержится...";
     Prices = 5000;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb15: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение соединения рамы с вилкой";
     Description = "Вилка из рамы выпадает... Приеду в ближайшее поселение - заменю крепление.";
     Prices = 2500;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb16: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение соединения вилки с передним колесом";
     Description = "Если приподнять переднее колесо, то оно выпадает. Хм-м... Придётся чинить крепление.";
     Prices = 1000;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb17: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение переднего амортизатора";
     Description = "Руль немного упал... Видимо, проблемы с передним амортизатором. Надеюсь, я доеду с такой поломкой.";
     Prices = 3500;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb18: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение нижней трубки рамы";
     Description = "Я увидел небольшую трещину в нижней трубке рамы... Надо будет заварить.";
     Prices = 2000;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb19: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение центральной трубки рамы";
     Description = "Я увидел небольшую трещину в центральной трубке рамы... Надо будет заварить.";
     Prices = 2000;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb20: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение сиденья";
     Description = "Вот смотрю я на своё сиденье и думаю. Как можно было довести его до такого состояния?";
     Prices = 1000;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb21: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение задней вилки";
     Description = "Ай-й, вилка сломалась. Ладно, думаю, на изоленте до конца дороги продержится...";
     Prices = 2500;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb22: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение соединения вилки с задним колесом";
     Description = "Если приподнять заднее колесо, то оно выпадает. Хм-м... Придётся чинить крепление.";
     Prices = 1000;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb23: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение заднего амортизатора";
     Description = "Седло немного упало... Походу, проблемы с задним амортизатором. Надеюсь, я доеду с такой поломкой.";
     Prices = 4000;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb24: Biker_0.BikeBreak {
+context: bb {
     Name = "Потёрлись колодки заднего тормоза";
     Description = "Задний тормоз уже вообще не тормозит... Надо будет купить новые колодки...";
     Prices = 750;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb25: Biker_0.BikeBreak {
+context: bb {
     Name = "Потёрлись колодки переднего тормоза";
     Description = "Передний тормоз уже вообще не тормозит... Надо будет купить новые колодки...";
     Prices = 750;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb26: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение заднего тормоза";
     Description = "Задний тормоз перестал работать... Жаль...";
     Prices = 3000;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb27: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение переднего тормоза";
     Description = "Передний тормоз перестал работать... Жаль...";
     Prices = 2000;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb28: Biker_0.BikeBreak {
+context: bb {
     Name = "Попадание грязи в колодки тормозов";
     Description = "Зря я по той луже проехал... Теперь тормоза еле-еле работают...";
     Prices = 250;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb29: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение тросика переднего тормоза";
     Description = "Тросик порвался...";
     Prices = 250;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb30: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение тросика заднего тормоза";
     Description = "Тросик порвался...";
     Prices = 250;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb31: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение тросика переднего переключателя";
     Description = "Тросик порвался...";
     Prices = 400;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb32: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение тросика заднего переключателя";
     Description = "Тросик порвался...";
     Prices = 400;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb33: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение провода велокомпьютера";
     Description = "Велокомпьютер перестал показывать текущую скорость. Просто ноль. Поискав причины я увидел порванный провод. Придётся покупать новый...";
     Prices = 1500;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb34: Biker_0.BikeBreak {
+context: bb {
     Name = "Слабое натяжение цепи";
     Description = "В последнее время цепь стала часто спадать...";
     Prices = 300;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb35: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение цепи";
     Description = "Порвалась цепь... Такое бывает не часто... Кое-как я её присобачил изолентой. Надеюсь, доеду...";
     Prices = 1000;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb36: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение кассеты";
     Description = "Задние звездочки сломались...";
     Prices = 1500;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb37: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение системы ведущих звёзд";
     Description = "Передние звездочки сломались...";
     Prices = 5000;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb38: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение переднего переключателя";
     Description = "У заднего переключателя вылетела пружина и он перестал работать. Кое-как примотав его к вилке проволокой я заставил его работать на одной скорости. Господи, хоть бы хватило до следующего поселения...";
     Prices = 2500;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }
 
-context bb39: Biker_0.BikeBreak {
+context: bb {
     Name = "Повреждение заднего переключателя";
     Description = "У переднего переключателя вылетела пружина и он перестал работать. Кое-как поставив брусок между ним и рамой я заставил его работать на одной скорости. Господи, хоть бы хватило до следующего поселения...";
     Prices = 1500;
     Frequency = 100%;
-    Effect = new context { } as Biker_0.BreakEffect;
+    Effect = new context: effect {
+        
+    };
 }

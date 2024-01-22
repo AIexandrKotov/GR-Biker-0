@@ -1,9 +1,11 @@
-context t0: Biker_0.Town {
+using Biker_0.Town as town;
+
+context: town {
     Name = "Урюпинск";
     Description = "Уезжай-ка ты из этого Урюпинска. Ты отлично катаешься на велике, на большой земле ты сможешь гораздо большему научиться.\nЯ уже слишком стар чтобы ехать с тобой... Поезжай в Строгачёво. Сперва в Подбережный, потом в Мухтарск, а после уже в Строгачёво. Удачи тебе.";
 }
 
-context t1: Biker_0.Town {
+context: town {
     Name = "Подбережный";
     Description = "Подбережный... Город, который когда-то был лучшим курортом округа.";
     HasRepair = true;
@@ -11,50 +13,50 @@ context t1: Biker_0.Town {
     HasTrickSchool = true;
 }
 
-context t2: Biker_0.Town {
+context: town {
     Name = "Мухтарск";
     Description = "Мухтарск. Злдесь дрессируют бойцовских собак. Дальше в Строгачёво.";
     HasRepair = true;
     HasBikeShop = true;
 }
 
-context t3: Biker_0.Town {
+context: town {
     Name = "Панино";
     Description = "Панино. Знаменито своими кинологами.";
     HasRepair = true;
 }
 
-context t4: Biker_0.Town {
+context: town {
     Name = "Строгачёво";
     Description = "Вот и Строгачёво. Ближайший от Урюпинска город с каскадёрской ареной.";
     HasTrickArena = true;
 }
 
-context t5: Biker_0.Town {
+context: town {
     Name = "Гадово";
     Description = "Гадово. Много змей. Здешний змеиный яд пользуется огромным спросом у медиков.";
     HasBikeShop = true;
 }
 
-context t6: Biker_0.Town {
+context: town {
     Name = "Зубово";
     Description = "В Зубово самые дешёвые стоматологические услуги.";
     HasRepair = true;
 }
 
-context t7: Biker_0.Town {
+context: town {
     Name = "Донино";
     Description = "Донино названо в честь местного героя - Ильи Донина. Говорят, тот обладал такой силой, что запросто бы поднял двухтонную машину.";
     HasTrickSchool = true;
 }
 
-context t8: Biker_0.Town {
+context: town {
     Name = "Конево";
     Description = "Конево - город биологов. Кроме того, некоторые жители частенько продают нелегальные растения.";
     HasRepair = true;
 }
 
-context t9: Biker_0.Town {
+context: town {
     Name = "Бердянск";
     Description = "Бердянск - столица округа. Хотя, раньше он не был столицей. Первой столицей округа был Иркутск.";
     HasRepair = true;
@@ -63,31 +65,31 @@ context t9: Biker_0.Town {
     HasRaceArena = true;
 }
 
-context t10: Biker_0.Town {
+context: town {
     Name = "Хрюпань";
     Description = "Хрюпань - очень богатый город. За счёт продаж свинины они имеют огромный деньги.";
     HasRepair = true;
 }
 
-context t11: Biker_0.Town {
+context: town {
     Name = "Танковск";
     Description = "Конструкторское бюро Танковска знаменито на всю страну.";
     HasRepair = true;
 }
 
-context t12: Biker_0.Town {
+context: town {
     Name = "Рогозино";
     Description = "Рогозино - небольшой городок южнее столицы.";
     HasRepair = true;
 }
 
-context t13: Biker_0.Town {
+context: town {
     Name = "Котово";
     Description = "Котово. Город, в котором когда-то жил человек-кот. Мерзость.";
     HasRepair = true;
 }
 
-context t14: Biker_0.Town {
+context: town {
     Name = "Иркутск";
     Description = "Когда-то столицей округа был Иркутск. Но уже много времени прошло с тех времён. Бердянск куда больше принёс пользы.";
     HasRepair = true;
@@ -95,37 +97,37 @@ context t14: Biker_0.Town {
     HasTrickSchool = true;
 }
 
-context t15: Biker_0.Town {
+context: town {
     Name = "Заречье";
     Description = "Заречье - рыболовный район округа.";
     HasTrickArena = true;
 }
 
-context t16: Biker_0.Town {
+context: town {
     Name = "Макарово";
     Description = "Макарово - военный город. Единственный район, где производят стрелковое оружие.";
     HasRepair = true;
 }
 
-context t17: Biker_0.Town {
+context: town {
     Name = "Северозад";
     Description = "Северозад - древнейший город округа. Кстати, находится он на юге.";
     HasTrickArena = true;
 }
 
-context t18: Biker_0.Town {
+context: town {
     Name = "Междуречье";
     Description = "Междуречье находится между двух рек.";
     HasTrickArena = true;
 }
 
-context t19: Biker_0.Town {
+context: town {
     Name = "Белоозёрск";
     Description = "Белоозёрск. Хм-м. А белых озёр-то тут нет.";
     HasRepair = true;
 }
 
-context t20: Biker_0.Town {
+context: town {
     Name = "Обезьянск";
     Description = "Обезьянск - город, знаменитый своим цирком.";
     HasTrickArena = true;

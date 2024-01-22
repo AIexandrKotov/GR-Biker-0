@@ -13,7 +13,7 @@ namespace Biker_0
         public static void Main(string[] args)
         {
             Console.Title = "Biker 0";
-            new MainMenu().StartAnimation();
+            new MainMenu().Start();
             Terminal.Abort();
         }
     }
