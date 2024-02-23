@@ -11,6 +11,7 @@ using KCore.Graphics.Widgets;
 
 namespace Biker_0
 {
+
     public class MainMenu : Form
     {
         protected override void OnAllRedraw()
@@ -21,6 +22,7 @@ namespace Biker_0
                 Terminal.Set(1, i++);
                 town.ToSuperText().PrintSuperText();
             }
+            this.RealizeAnimation(new Game(new Player()));
         }
     }
 }

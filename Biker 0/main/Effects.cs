@@ -27,13 +27,11 @@ namespace Biker_0
         {
             int BoostBikeGroundAcceleration { get; set; }
             int BoostBikeAsphaltAcceleration { get; set; }
-            int BoostBikeTrickAcceleration { get; set; }
         }
         public interface IMultiplier
         {
             double MultiplierBikeGroundAcceleration { get; set; }
             double MultiplierBikeAsphaltAcceleration { get; set; }
-            double MultiplierBikeTrickAcceleration { get; set; }
         }
     }
 
@@ -43,11 +41,13 @@ namespace Biker_0
         {
             int BoostBikeTrickComfort { get; set; }
             int BoostBikeTrickBrake { get; set; }
+            int BoostBikeTrickAcceleration { get; set; }
         }
         public interface IMultiplier
         {
             double MultiplierBikeTrickComfort { get; set; }
             double MultiplierBikeTrickBrake { get; set; }
+            double MultiplierBikeTrickAcceleration { get; set; }
         }
     }
 
@@ -90,15 +90,15 @@ namespace Biker_0
                 MultiplierBikeAsphaltSpeed = breakEffects.Product(x => x.MultiplierBikeAsphaltSpeed),
                 MultiplierBikeAsphaltAcceleration = breakEffects.Product(x => x.MultiplierBikeAsphaltAcceleration),
                 MultiplierBikeGroundAcceleration = breakEffects.Product(x => x.MultiplierBikeGroundAcceleration),
-                MultiplierBikeGroundSpeed = breakEffects.Product(x => x.BoostBikeGroundSpeed),
-                MultiplierBikeTrickAcceleration = breakEffects.Product(x => x.BoostBikeTrickAcceleration),
-                MultiplierBikeTrickBrake = breakEffects.Product(x => x.BoostBikeTrickBrake),
-                MultiplierBikeTrickComfort = breakEffects.Product(x => x.BoostBikeTrickComfort),
+                MultiplierBikeGroundSpeed = breakEffects.Product(x => x.MultiplierBikeGroundSpeed),
+                MultiplierBikeTrickAcceleration = breakEffects.Product(x => x.MultiplierBikeTrickAcceleration),
+                MultiplierBikeTrickBrake = breakEffects.Product(x => x.MultiplierBikeTrickBrake),
+                MultiplierBikeTrickComfort = breakEffects.Product(x => x.MultiplierBikeTrickComfort),
             };
             if (ret.MultiplierBikeAsphaltSpeed < 0.1) ret.MultiplierBikeAsphaltSpeed = 0.1;
             if (ret.MultiplierBikeAsphaltAcceleration < 0.1) ret.MultiplierBikeAsphaltAcceleration = 0.1;
             if (ret.MultiplierBikeGroundAcceleration < 0.1) ret.MultiplierBikeGroundAcceleration = 0.1;
-            if (ret.MultiplierBikeGroundSpeed < 0.1) ret.MultiplierBikeGroundAcceleration = 0.1;
+            if (ret.MultiplierBikeGroundSpeed < 0.1) ret.MultiplierBikeGroundSpeed = 0.1;
             if (ret.MultiplierBikeTrickAcceleration < 0.1) ret.MultiplierBikeTrickAcceleration = 0.1;
             if (ret.MultiplierBikeTrickBrake < 0.1) ret.MultiplierBikeTrickBrake = 0.1;
             if (ret.MultiplierBikeTrickComfort < 0.1) ret.MultiplierBikeTrickComfort = 0.1;

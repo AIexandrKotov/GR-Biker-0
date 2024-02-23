@@ -1,0 +1,10 @@
+global.get_start_bike = () => new context: Biker_0.Bike {
+    Name = "Батина развалюха";
+    BoostBikeGroundSpeed = 8000;
+    BoostBikeAshpaltSpeed = 12000;
+    BoostBikeGroundAcceleration = 1000;
+    BoostBikeAsphaltAcceleration = 1000;
+    BoostBikeTrickAcceleration = 500;
+    BoostBikeTrickComfort = 5000;
+    BoostBikeTrickBrake = 2000;
+};

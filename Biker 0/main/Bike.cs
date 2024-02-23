@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KCore.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace Biker_0
     {
         public string Name { get; set; }
 
-        public List<int> BreaksIds { get; set; }
+        public List<int> BreaksIds { get; set; } = new List<int>();
         public IEnumerable<BikeBreak> Breaks => BreaksIds.Select(x => Data.Breaks[x]);
 
         public int BoostBikeGroundSpeed { get; set; }
@@ -25,6 +26,14 @@ namespace Biker_0
             yield return this;
             yield return AllBikeEffect.Collapse(Breaks.Select(x => x.Effect).ToArray());
         }
+
+        public double AsphaltSpeed => Cache.BikeSpeedCache.BoostBikeAshpaltSpeed * Cache.BikeSpeedCache.MultiplierBikeAsphaltSpeed;
+        public double GroundSpeed => Cache.BikeSpeedCache.BoostBikeGroundSpeed * Cache.BikeSpeedCache.MultiplierBikeGroundSpeed;
+        public double AsphaltAcceleration => Cache.BikeAccelerationCache.BoostBikeAsphaltAcceleration * Cache.BikeAccelerationCache.MultiplierBikeAsphaltAcceleration;
+        public double GroundAcceleration => Cache.BikeAccelerationCache.BoostBikeGroundAcceleration * Cache.BikeAccelerationCache.MultiplierBikeGroundAcceleration;
+        public double TrickAcceleration => Cache.BikeTrickCache.BoostBikeTrickAcceleration * Cache.BikeTrickCache.MultiplierBikeTrickAcceleration;
+        public double TrickComfort => Cache.BikeTrickCache.BoostBikeTrickComfort * Cache.BikeTrickCache.MultiplierBikeTrickComfort;
+        public double TrickBrake => Cache.BikeTrickCache.BoostBikeTrickBrake * Cache.BikeTrickCache.MultiplierBikeTrickBrake;
 
         #region CACHE
         public class BikeCache
@@ -44,17 +53,17 @@ namespace Biker_0
             {
                 public int BoostBikeGroundAcceleration { get; set; } = 0;
                 public int BoostBikeAsphaltAcceleration { get; set; } = 0;
-                public int BoostBikeTrickAcceleration { get; set; } = 0;
                 public double MultiplierBikeGroundAcceleration { get; set; } = 1.0;
                 public double MultiplierBikeAsphaltAcceleration { get; set; } = 1.0;
-                public double MultiplierBikeTrickAcceleration { get; set; } = 1.0;
             }
             public class BikeTrickCacheClass : BikeTrick.IBoost, BikeTrick.IMultiplier
             {
                 public int BoostBikeTrickComfort { get; set; } = 0;
                 public int BoostBikeTrickBrake { get; set; } = 0;
+                public int BoostBikeTrickAcceleration { get; set; } = 0;
                 public double MultiplierBikeTrickComfort { get; set; } = 1.0;
                 public double MultiplierBikeTrickBrake { get; set; } = 1.0;
+                public double MultiplierBikeTrickAcceleration { get; set; } = 1.0;
             }
         }
         private BikeCache cache;
@@ -68,7 +77,7 @@ namespace Biker_0
         }
         #endregion
 
-        public void UpdateCache()
+        public void UpdateCache(Player player)
         {
             cache = new BikeCache();
             foreach (var bonus in GetBonuses())
@@ -81,29 +90,29 @@ namespace Biker_0
                 if (bonus is BikeSpeed.IMultiplier bs_mult)
                 {
                     cache.BikeSpeedCache.MultiplierBikeGroundSpeed *= bs_mult.MultiplierBikeGroundSpeed;
-                    cache.BikeSpeedCache.MultiplierBikeGroundSpeed *= bs_mult.MultiplierBikeAsphaltSpeed;
+                    cache.BikeSpeedCache.MultiplierBikeAsphaltSpeed *= bs_mult.MultiplierBikeAsphaltSpeed;
                 }
                 if (bonus is BikeAcceleration.IBoost ba_boost)
                 {
                     cache.BikeAccelerationCache.BoostBikeGroundAcceleration += ba_boost.BoostBikeGroundAcceleration;
                     cache.BikeAccelerationCache.BoostBikeAsphaltAcceleration += ba_boost.BoostBikeAsphaltAcceleration;
-                    cache.BikeAccelerationCache.BoostBikeTrickAcceleration += ba_boost.BoostBikeTrickAcceleration;
                 }
                 if (bonus is BikeAcceleration.IMultiplier ba_mult)
                 {
                     cache.BikeAccelerationCache.MultiplierBikeGroundAcceleration *= ba_mult.MultiplierBikeGroundAcceleration;
                     cache.BikeAccelerationCache.MultiplierBikeAsphaltAcceleration *= ba_mult.MultiplierBikeAsphaltAcceleration;
-                    cache.BikeAccelerationCache.MultiplierBikeTrickAcceleration *= ba_mult.MultiplierBikeTrickAcceleration;
                 }
                 if (bonus is BikeTrick.IBoost bt_boost)
                 {
                     cache.BikeTrickCache.BoostBikeTrickBrake += bt_boost.BoostBikeTrickBrake;
                     cache.BikeTrickCache.BoostBikeTrickComfort += bt_boost.BoostBikeTrickComfort;
+                    cache.BikeTrickCache.BoostBikeTrickAcceleration += bt_boost.BoostBikeTrickAcceleration;
                 }
                 if (bonus is BikeTrick.IMultiplier bt_mult)
                 {
                     cache.BikeTrickCache.MultiplierBikeTrickBrake *= bt_mult.MultiplierBikeTrickBrake;
                     cache.BikeTrickCache.MultiplierBikeTrickComfort *= bt_mult.MultiplierBikeTrickComfort;
+                    cache.BikeTrickCache.MultiplierBikeTrickAcceleration *= bt_mult.MultiplierBikeTrickAcceleration;
                 }
             }
         }

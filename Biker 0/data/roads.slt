@@ -45,7 +45,6 @@ Roads = [
 ];
 
 using linq;
-foreach (road in linq.to_array(Roads))
-    Roads.Add(road.Reverse());
+Roads.AddRange(Roads |> linq.to_array() |> linq.select(road => road.Reverse()));
 
 return Roads;

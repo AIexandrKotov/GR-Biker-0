@@ -28,6 +28,11 @@ namespace Biker_0
             }
         }
 
+        public static void Init()
+        {
+
+        }
+
         static Data()
         {
             ScriptLayout.Execute(ReadResource("Biker_0.data.init.slt"));
@@ -38,6 +43,7 @@ namespace Biker_0
             Breaks = ReadResource("Biker_0.data.breaks.slt")
                 .RunScript().LocalVariables.GetAsDictionary().Values.OfType<BikeBreak>().ToArray();
             BreakChooser = new ChanceChooser<BikeBreak>(Breaks.ConvertAll(x => (x, x.Frequency)));
+            ReadResource("Biker_0.data.get_start_bike.slt").RunScript();
         }
     }
 }
